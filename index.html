@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Spotify</title>
+    <link rel="stylesheet" href="resources/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <nav aria-label="Navegación principal">
+            <a href="#inicio">Spotify Para Pobres</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section class="reproductor" aria-labelledby="titulo-app">
+            <h1 id="titulo-app">Mis Rolas</h1>
+
+            <article class="cancion-actual" aria-label="Canción seleccionada">
+                <img id="portada" src="resources/imagenes/FZ111XPANTIA.jpg" alt="Portada del disco" class="portada">
+                <div class="detalles">
+                    <h2 id="titulo-cancion" class="titulo-cancion">Malboro Rojo</h2>
+                    <p id="artista" class="artista">Fuerza Regida</p>
+                </div>
+                <audio id="mi-audio"></audio>
+                <div class="controles">
+                    <button id="anterior" class="btn-control" type="button" aria-label="Canción anterior">⏮</button>
+                    <button id="boton-reproducir" class="btn-play" type="button">▶ Correr</button>
+                    <button id="siguiente" class="btn-control" type="button" aria-label="Siguiente canción">⏭</button>
+                </div>
+                <p id="estado" class="estado" aria-live="polite"></p>
+            </article>
+
+            <section class="lista" aria-labelledby="titulo-lista">
+                <h2 id="titulo-lista">Lista de Rolas</h2>
+                <ol id="lista-canciones"></ol>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>Escoje tu cancion favorita we</p>
+    </footer>
+    <script src="resources/main.js"></script>
+</body>
+<a class="boton-reproductor" href="portada.html">Regresar a donde viniste</a>
+</html>

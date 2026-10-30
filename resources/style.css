@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.encabezado {
+    padding: 20px max(20px, calc((100% - 760px) / 2));
+    background-color: #1e1e1e;
+}
+
+.encabezado a {
+    color: #1db954;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.reproductor {
+    width: min(100% - 32px, 600px);
+    margin: 35px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}
+
+.cancion-actual,
+.lista {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #1e1e1e;
+}
+
+.cancion-actual {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    align-items: center;
+    gap: 16px;
+}
+
+.portada {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.titulo-cancion {
+    margin-bottom: 6px;
+    font-size: 1.15rem;
+}
+
+.artista,
+.estado,
+footer {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+}
+
+.controles {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn-control {
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.btn-play {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 20px;
+    background-color: #1db954;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.btn-play:hover {
+    background-color: #179643;
+}
+
+.btn-control:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.estado {
+    grid-column: 1 / -1;
+    min-height: 16px;
+    text-align: center;
+}
+
+.lista {
+    margin-top: 20px;
+}
+
+.lista h2 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+#lista-canciones {
+    list-style: none;
+}
+
+.cancion-lista {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 10px;
+    border: 0;
+    border-top: 1px solid #333333;
+    background: transparent;
+    color: #ffffff;
+    text-align: left;
+}
+
+.cancion-lista:hover,
+.cancion-lista.seleccionada {
+    color: #1db954;
+}
+
+.artista-lista {
+    color: #b3b3b3;
+}
+
+footer {
+    padding: 0 16px 24px;
+    text-align: center;
+}
+
+.boton-reproductor {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding: 13px 20px;
+    border-radius: 8px;
+    background: #454141;
+    color: #080b08;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.boton-reproductor:hover {
+    background: #91c096;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #1db954;
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .boton-reproductor {
+        right: 16px;
+        bottom: 16px;
+    }
+}
